@@ -38,7 +38,7 @@ const config: PlaywrightTestConfig = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:8000',
     /* browserName - Name of the browser that will run the tests, one of chromium, firefox, or webkit. */
     browserName: 'chromium',
 
@@ -56,7 +56,7 @@ const config: PlaywrightTestConfig = {
      * 'retain-on-failure' - Record video for each test, but remove all videos from successful test runs.
      * 'on-first-retry' - Record video only when retrying a test for the first time.
      */
-    video: 'retain-on-failure',
+    video: 'on', //'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
@@ -68,19 +68,19 @@ const config: PlaywrightTestConfig = {
       },
     },
 
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //   },
+    // },
 
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //   },
+    // },
 
     /* Test against mobile viewports. */
     // {

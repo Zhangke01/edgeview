@@ -322,7 +322,12 @@ export default [
   },
   {
     path: '/',
-    redirect: '/device/rsu',
+    component: './index',
+    // redirect: '/device/rsu',
+  },
+  {
+    path: '/testNewTab',
+    component: './testNewTab',
   },
   {
     component: './404',
